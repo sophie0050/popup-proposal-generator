@@ -50,7 +50,7 @@ A4 1~2장 분량 정도로 작성해주세요.
 def get_proposal(prompt, api_key):
     try:
         openai.api_key = api_key
-        response = openai.ChatCompletion.create(
+        response = openai.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.7
